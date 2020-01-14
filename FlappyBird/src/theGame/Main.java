@@ -21,5 +21,4 @@ public class Main {
 		window.add(Affi);
 		window.addMouseListener(ctrl);
 	}
-int s;
 }
