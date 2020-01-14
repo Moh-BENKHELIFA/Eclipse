@@ -1,9 +1,12 @@
-package theGame;
+package control;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
+import model.Etat;
+import view.Affichage;
 
 public class Control implements KeyListener, MouseListener {
 	
@@ -18,8 +21,15 @@ public class Control implements KeyListener, MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+		if(arg0.getButton()==1) {
+			e.jump();
+			a.repaint();
+		}
 		
+		if(arg0.getButton()==3) {
+			e.fall();
+			a.repaint();
+		}
 	}
 
 	@Override
