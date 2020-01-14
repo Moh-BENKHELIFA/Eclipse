@@ -41,6 +41,7 @@ public class Control implements KeyListener, MouseListener {
 		if(arg0.getButton()==3) {
 			e.fall();
 			a.repaint();
+			int a;
 		}
 	}
 
