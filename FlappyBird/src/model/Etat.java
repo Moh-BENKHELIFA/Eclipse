@@ -33,8 +33,6 @@ public class Etat {
 		
 		this.hauteur += 100;
 		
-//		if(this.hauteur > max_affichage_h)
-//			this.hauteur = max_affichage_h;
 	}
 
 }
