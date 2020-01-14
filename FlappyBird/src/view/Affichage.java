@@ -14,6 +14,14 @@ public class Affichage extends JPanel{
 	private final int width;
 	private final int height;
 	
+	/**
+	 * Constructeur de la classe Affichage qui permet
+	 * l'affichage d'un etat donnee
+	 * 
+	 * @param e 	 L'etat a afficher
+	 * @param width	 longueur de la zone d'affichage
+	 * @param height hauteur de la zone d'affichage
+	 */
 	public Affichage(Etat e, int width, int height) {
 		this.e = e;
 		this.width = width;
@@ -21,7 +29,11 @@ public class Affichage extends JPanel{
 
 	}
 	
-	
+	/**
+	 * Dessine sur le JPanel 
+	 * 
+	 * @ g 	Element Graphics
+	 */
 	@Override
 	public void paint(Graphics g) {
 		super.paint(g);

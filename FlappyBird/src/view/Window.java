@@ -5,9 +5,18 @@ import javax.swing.*;
 
 public class Window extends JFrame {
 
+	/**
+	 *Constructeur de l'objet Window qui permet de creer une fenetre
+	 *de dimension quelconque.
+	 *On interdit la redimension de la fenetre
+	 *On centre la fenetre sur l'ecran
+	 * 
+	 * @param width 	longeur de la fenetre
+	 * @param height 	hauteur de la fenetre
+	 */
 	public Window(int width, int height) {
 			
-			pack();
+		//	pack();
 			setVisible(true);
 			setResizable(false);
 			setSize(width, height);
@@ -16,9 +25,7 @@ public class Window extends JFrame {
 			
 		}
 	
-	public void add (JPanel p) {
-		setContentPane(p);							//la fenetre affiche le MenuPanel
-	}
+
 
 
 }
