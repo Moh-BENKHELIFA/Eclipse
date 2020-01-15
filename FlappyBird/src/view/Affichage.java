@@ -1,4 +1,5 @@
 package view;
+import java.awt.Point;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -29,6 +30,7 @@ public class Affichage extends JPanel{
 
 	}
 	
+	
 	/**
 	 * Dessine sur le JPanel 
 	 * 
@@ -38,8 +40,14 @@ public class Affichage extends JPanel{
 	public void paint(Graphics g) {
 		super.paint(g);
 		g.setColor(Color.blue);
-		g.drawOval(500, e.getHauteur(), 100, 200);
-	
+		g.drawOval(150, e.getHauteur(), 100, 200);
+		
+		Point[] p = this.e.getParcours();
+		
+		for(int i=0; i<p.length-1; i++) {
+			g.drawLine(p[i].x, p[i].y, p[i+1].x, p[i+1].y);		
+		}
+		
 	}
 	
 	//TODO
