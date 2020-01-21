@@ -13,7 +13,6 @@ public class Control implements KeyListener, MouseListener {
 	
 	private Affichage a;
 	private Etat e;
-	int az;
 	
 	/**
 	 * Constructeur de la classe Control 
@@ -36,6 +35,7 @@ public class Control implements KeyListener, MouseListener {
 	public void mouseClicked(MouseEvent arg0) {
 		if(arg0.getButton()==1) {
 			e.jump();
+			e.nose2();
 			a.repaint();
 		}
 		
@@ -58,8 +58,16 @@ public class Control implements KeyListener, MouseListener {
 	public void mouseReleased(MouseEvent arg0) {}
 
 	@Override
-	public void keyPressed(KeyEvent arg0) {}
-
+	public void keyPressed(KeyEvent arg0) {
+		//Barre espace
+		if(arg0.getKeyCode() == 32) {
+			//e.jump();
+			e.jump2();
+			e.move();
+			a.repaint();
+		}		
+	}
+	
 	@Override
 	public void keyReleased(KeyEvent arg0) {}
 
